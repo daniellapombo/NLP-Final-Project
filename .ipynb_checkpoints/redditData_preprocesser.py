@@ -37,17 +37,21 @@ from nltk.stem import PorterStemmer
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+'''
+Import data sets and assign corresponding labels
+'teen_processed.csv' - reddit teen text
+'genx_processed.csv' - reddit GenX text
+'''
+
+
 def import_txtF():
-    #Import data sets and assign corresponding labels
-        #'teen_processed.csv' - reddit teen text
-        #'genx_processed.csv' - reddit GenX text
-    
-    teen = pd.read_csv('teen_processed.csv', header = [0])
+    teen = pd.read_csv('./data/teen_processed.csv', header=[0])
     tn_label = np.zeros((teen.shape[0], 1), dtype=int)
-    gX = pd.read_csv('genx_processed.csv', header = [0])
+    gX = pd.read_csv('./data/genx_processed.csv', header=[0])
     gX_label = np.ones((gX.shape[0], 1), dtype=int)
 
     return teen, tn_label, gX, gX_label
+
 
 def rdttxt_processing():
     tn, tn_l, genX, genX_l = import_txtF()
