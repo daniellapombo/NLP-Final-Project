@@ -137,7 +137,7 @@ def models(X_train, y_train, X_test, y_test):
                  'classifier__C': np.logspace(0, 4, 3)}]
 
 #    #Record results/findings (data)
-    out_file = open('Comp329ModelEvaluationReport.txt', 'w')
+    out_file = open('./Documents/Comp329ModelEvaluationReport.txt', 'w')
 
     out_file.writelines('Classifier Report' + '\n')
 
