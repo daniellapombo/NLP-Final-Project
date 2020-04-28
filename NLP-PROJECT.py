@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import re
@@ -46,41 +45,19 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import ComplementNB
 
 # for LSTM Model
-# from __future__ import print_function
-# from keras.preprocessing import sequence
-# from keras.models import Sequential
-# from keras.layers import Dense, Embedding, Input, Dropout
-# from keras.layers import LSTM
-# from keras.preprocessing import *
-# from keras.wrappers.scikit_learn import KerasClassifier
-# from sklearn.model_selection import StratifiedKFold
+from __future__ import print_function
+from keras.preprocessing import sequence
+from keras.models import Sequential
+from keras.layers import Dense, Embedding, Input, Dropout
+from keras.layers import LSTM
+from keras.preprocessing import *
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.model_selection import StratifiedKFold
 
 # Model Evaluation
 from sklearn.metrics import classification_report
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import auc
-import matplotlib.pyplot as plt
-plt.style.use('ggplot')
-
-
-def plot_history(history):
-    acc = history.history['acc']
-    val_acc = history.history['val_acc']
-    loss = history.history['loss']
-    val_loss = history.history['val_loss']
-    x = range(1, len(acc) + 1)
-
-    plt.figure(figsize=(12, 5))
-    plt.subplot(1, 2, 1)
-    plt.plot(x, acc, 'b', label='Training acc')
-    plt.plot(x, val_acc, 'r', label='Validation acc')
-    plt.title('Training and validation accuracy')
-    plt.legend()
-    plt.subplot(1, 2, 2)
-    plt.plot(x, loss, 'b', label='Training loss')
-    plt.plot(x, val_loss, 'r', label='Validation loss')
-    plt.title('Training and validation loss')
-    plt.legend()
 
 """NLP Algorithms for Reddit Text Data
 Objective: identify age demographics of the author and commentor
