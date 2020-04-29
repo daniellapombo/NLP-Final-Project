@@ -1,0 +1,20 @@
+Classifier Report
+LogisticReg Results on test datausing TfidfVectorizer(analyzer=<function vec.<locals>.stems at 0x1a211ebb70>,
+        binary=False, decode_error='strict', dtype=<class 'numpy.float64'>,
+        encoding='utf-8', input='content', lowercase=True, max_df=1,
+        max_features=None, min_df=1, ngram_range=(1, 1), norm='l2',
+        preprocessor=None, smooth_idf=True, stop_words='english',
+        strip_accents=None, sublinear_tf=False,
+        token_pattern='(?u)\\b\\w\\w+\\b', tokenizer=None, use_idf=True,
+        vocabulary=None)tokenizer
+Accuracy 0.8166563082660038
+              precision    recall  f1-score   support
+
+           0       0.82      0.98      0.89      2529
+           1       0.73      0.23      0.35       689
+
+   micro avg       0.82      0.82      0.82      3218
+   macro avg       0.78      0.60      0.62      3218
+weighted avg       0.80      0.82      0.78      3218
+
+AUC results 0.5617095529347558
