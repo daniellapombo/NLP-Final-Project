@@ -55,9 +55,9 @@ def import_txtF():
         #'teen_processed.csv' - reddit teen text
         #'genx_processed.csv' - reddit GenX text
 
-    teen = pd.read_csv('teen_processed.csv', header = [0])
+    teen = pd.read_csv('data/teen_processed.csv', header = [0])
     tn_label = np.zeros((teen.shape[0], 1), dtype=int)
-    gX = pd.read_csv('genx_processed.csv', header = [0])
+    gX = pd.read_csv('data/genx_processed.csv', header = [0])
     gX_label = np.ones((gX.shape[0], 1), dtype=int)
 
     return teen, tn_label, gX, gX_label
@@ -137,7 +137,7 @@ def models(X_train, y_train, X_test, y_test):
                  'classifier__C': np.logspace(0, 4, 3)}]
 
 #    #Record results/findings (data)
-    out_file = open('./Documents/Comp329ModelEvaluationReport.txt', 'w')
+    out_file = open('Comp329ModelEvaluationReport.txt', 'w')
 
     out_file.writelines('Classifier Report' + '\n')
 
